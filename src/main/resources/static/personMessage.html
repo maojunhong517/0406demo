@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>红岩人员管理平台</title>
+</head>
+<body>
+<h2>红岩人员管理平台</h2>
+<h3>query</h3>
+<form method="post" action="/user/queryAll">
+    <input type="submit" value="查询所有人员">
+</form>
+<h3>add</h3>
+<form method="post" action="/user/add">
+    用户名:<input name="userName" type="text"><br>
+    密码:<input name="passWord" type="text"><br>
+    <input type="submit" value="添加">
+</form>
+<h3>delete</h3>
+<form method="post" action="/user/deleteById">
+    编号:<input name="id" type="text"><br>
+    <input type="submit" value="删除该编号对应人员">
+</form>
+<h3>modify</h3>
+<form method="post" action="/user/update">
+    编号:<input name="id" type="text"><br>
+    用户名:<input name="userName" type="text"><br>
+    密码:<input name="passWord" type="text"><br>
+    <input type="submit" value="更新该编号对应人员信息">
+</form>
+</body>
+</html>

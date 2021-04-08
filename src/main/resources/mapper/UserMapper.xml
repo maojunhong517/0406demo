@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--xmlns="http://mybatis.org/schema/mybatis-mapper"-->
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <select id="findByName" resultType="User">
+        select * from User where username=#{userName}
+    </select>
+    <select id="findPswByName" resultType="String">
+        select password from user where username = #{userName}
+    </select>
+    <insert id="save">
+        insert into user(id,username,password) value (#{id},#{userName},#{passWord})
+    </insert>
+
+    <insert id="add">
+        insert into user(id,username,password) value (#{id},#{userName},#{passWord})
+    </insert>
+    <update id="update">
+        update user set username = #{userName},password = #{passWord} where id = #{id}
+    </update>
+    <delete id="deleteById">
+        delete from user where id = #{id}
+    </delete>
+    <select id="queryAll" resultType="User">
+        select * from user
+    </select>
+</mapper>
